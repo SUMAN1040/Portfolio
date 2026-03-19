@@ -1,0 +1,97 @@
+/* Skills Section */
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+    z-index: 2;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.skills-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    padding: 1rem 0;
+}
+.track-rtl {
+    animation: scroll-rtl 40s linear infinite;
+}
+.track-ltr {
+    animation: scroll-ltr 40s linear infinite;
+}
+
+.skills-marquee:hover .skills-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); }
+}
+@keyframes scroll-ltr {
+    0% { transform: translateX(calc(-50% - 1rem)); }
+    100% { transform: translateX(0); }
+}
+
+.skill-card {
+    flex: 0 0 200px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        flex: 0 0 150px;
+        padding: 1rem;
+    }
+    .skill-card i {
+        font-size: 2.5rem;
+    }
+    .skill-card h3 {
+        font-size: 0.9rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    .track-rtl, .track-ltr {
+        animation-duration: 20s; /* Faster scroll since cards are smaller and there's less space */
+    }
+}
+.skill-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    z-index: 10;
+}
+.skill-card i {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s;
+}
+.skill-card:hover i {
+    transform: translateZ(40px) scale(1.1);
+}
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background: var(--gradient-1);
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.observe-section.is-visible .progress {
+    transform: scaleX(1);
+}

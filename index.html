@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Engineering Student</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/splash.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- DevIcon for brand logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Welcome Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <span class="terminal-prompt">></span>
+            <h1 class="splash-text">Welcome</h1>
+            <span class="terminal-cursor"></span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">Suman<span class="gradient-text">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <main class="perspective-container">
+        <!-- Hero Section -->
+        <section id="hero" class="observe-section">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="Hello, I'm Suman Kumar Dey">Hello, I'm <span class="gradient-text">Suman Kumar Dey</span></h1>
+                <h2 class="typing-container"><span class="typing-text"></span><span class="cursor-blink">|</span></h2>
+                <div class="cta-buttons">
+                    <a href="https://drive.google.com/file/d/18r2pb9dE_6Nm0Q7c4Rc4AVSj7vWW3PFM/view?usp=sharing" target="_blank" class="btn btn-primary">View Resume</a>
+                    <a href="#contact" class="btn btn-secondary glass-btn">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-3d-card tilt-card">
+                <div class="card-inner">
+                    <img src="./assets/pf_image.jpg" alt="Profile" class="profile-img">
+                    <div class="card-text-content">
+                        <h3>Future Software Engineer</h3>
+                        <p>Driven by Innovation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="observe-section">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text glass-card tilt-element">
+                    <div class="bio-paragraphs">
+                        <p class="reveal-text">Hi, I'm <span class="highlight">Suman</span>, a 3rd-year Engineering student<span class="highlight"></span>, deeply passionate about software development and machine learning. I am constantly honing my programming skills and exploring innovative ways to solve real-world problems through technology. My journey is fueled by a commitment to building impactful digital solutions and collaborating with tech enthusiasts to create meaningful change. I'm always eager to learn, grow, and contribute to the ever-evolving world of software engineering.</p>
+                    </div>
+                    <div class="prospect-badge">
+                        <div class="badge-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="badge-text">Prospect to see myself as a <span class="gradient-text">Software Engineer</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="observe-section">
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            
+            <!-- Track 1: Web & Backend (Right to Left) -->
+            <div class="skills-marquee">
+                <div class="skills-track track-rtl">
+                    <!-- Set 1 -->
+                    <div class="skill-card tilt-card"><i class="devicon-html5-plain colored"></i><h3>HTML5</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-css3-plain colored"></i><h3>CSS3</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-javascript-plain colored"></i><h3>JavaScript</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-react-original colored"></i><h3>React</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-bootstrap-plain colored"></i><h3>Bootstrap</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-django-plain colored"></i><h3>Django</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-fastapi-plain colored"></i><h3>REST API</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-mysql-plain colored"></i><h3>SQL</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-mongodb-plain colored"></i><h3>MongoDB</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-postgresql-plain colored"></i><h3>PostgreSQL</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-firebase-plain colored"></i><h3>Firebase</h3></div>
+                    <!-- Duplicate for Infinite Scroll -->
+                    <div class="skill-card tilt-card"><i class="devicon-html5-plain colored"></i><h3>HTML5</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-css3-plain colored"></i><h3>CSS3</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-javascript-plain colored"></i><h3>JavaScript</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-react-original colored"></i><h3>React</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-bootstrap-plain colored"></i><h3>Bootstrap</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-django-plain colored"></i><h3>Django</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-fastapi-plain colored"></i><h3>REST API</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-mysql-plain colored"></i><h3>SQL</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-mongodb-plain colored"></i><h3>MongoDB</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-postgresql-plain colored"></i><h3>PostgreSQL</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-firebase-plain colored"></i><h3>Firebase</h3></div>
+                </div>
+            </div>
+
+            <!-- Track 2: Languages & AI/ML (Left to Right) -->
+            <div class="skills-marquee">
+                <div class="skills-track track-ltr">
+                    <!-- Set 2 -->
+                    <div class="skill-card tilt-card"><i class="devicon-python-plain colored"></i><h3>Python</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-java-plain colored"></i><h3>Java</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-cplusplus-plain colored"></i><h3>C / C++</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-kotlin-plain colored"></i><h3>Kotlin</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-gradle-plain colored"></i><h3>Gradle</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-xml-plain colored"></i><h3>XML</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-tensorflow-original colored"></i><h3>TensorFlow</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-pandas-plain colored"></i><h3>Pandas</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-numpy-plain colored"></i><h3>NumPy</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-matplotlib-plain colored"></i><h3>Matplotlib</h3></div>
+                    <div class="skill-card tilt-card"><i class="fas fa-chart-bar" style="color: #4682b4;"></i><h3>Seaborn</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-opencv-plain colored"></i><h3>OpenCV</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-pytorch-plain colored"></i><h3>PyTorch</h3></div>
+                    <!-- Duplicate for Infinite Scroll -->
+                    <div class="skill-card tilt-card"><i class="devicon-python-plain colored"></i><h3>Python</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-java-plain colored"></i><h3>Java</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-cplusplus-plain colored"></i><h3>C / C++</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-kotlin-plain colored"></i><h3>Kotlin</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-gradle-plain colored"></i><h3>Gradle</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-xml-plain colored"></i><h3>XML</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-tensorflow-original colored"></i><h3>TensorFlow</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-pandas-plain colored"></i><h3>Pandas</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-numpy-plain colored"></i><h3>NumPy</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-matplotlib-plain colored"></i><h3>Matplotlib</h3></div>
+                    <div class="skill-card tilt-card"><i class="fas fa-chart-bar" style="color: #4682b4;"></i><h3>Seaborn</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-opencv-plain colored"></i><h3>OpenCV</h3></div>
+                    <div class="skill-card tilt-card"><i class="devicon-pytorch-plain colored"></i><h3>PyTorch</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="observe-section">
+            <div class="projects-bg">
+                <div class="bg-item active" style="background-image: url('assets/texify_mockup.png');"></div>
+                <div class="bg-item" style="background-image: url('assets/sahaayak_app_mockup.png');"></div>
+                <div class="bg-item" style="background-image: url('assets/techfest_website_mockup.png');"></div>
+            </div>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="carousel-container">
+                <div class="project-external-preview">
+                    <div class="preview-img active" style="background-image: url('assets/texify_mockup.png');"></div>
+                    <div class="preview-img" style="background-image: url('assets/sahaayak_app_mockup.png');"></div>
+                    <div class="preview-img" style="background-image: url('assets/techfest_website_mockup.png');"></div>
+                </div>
+                <button class="carousel-control prev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+                <div class="projects-carousel">
+                    <!-- Project 1 -->
+                    <div class="project-card active tilt-element" id="project-texify">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-badge">Django Web App</div>
+                                <div class="project-img" style="background-image: url('assets/texify_mockup.png');"></div>
+                                <h3 class="card-title">Texify</h3>
+                            </div>
+                            <div class="card-back glass-card">
+                                <div class="project-info">
+                                    <h3>Texify</h3>
+                                    <p>Django-based Text Analyzer for cleaning and transforming text (Remove punctuations, Uppercase, etc.).</p>
+                                    <div class="tech-stack"><span>Python</span><span>Django</span><span>Bootstrap</span></div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/SUMAN1040/Texify.git" class="btn-sm glass-btn"><i class="fab fa-github"></i> Code</a>
+                                        <a href="https://texify-34yv.onrender.com/" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card tilt-element" id="project-sahaayak">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-badge">Mobile App</div>
+                                <div class="project-img" style="background-image: url('assets/sahaayak_app_mockup.png');"></div>
+                                <h3 class="card-title">Sahaayak</h3>
+                            </div>
+                            <div class="card-back glass-card">
+                                <div class="project-info">
+                                    <h3>Sahaayak</h3>
+                                    <p>Women safety app using Kotlin and ML. Auto-triggers SOS, location sharing, and alarms.</p>
+                                    <div class="tech-stack"><span>Kotlin</span><span>ML</span><span>Firebase</span><span>XML</span></div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/SUMAN1040/Sahaayak.git" class="btn-sm glass-btn"><i class="fab fa-github"></i> Code</a>
+                                        <a href="#" class="btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card tilt-element" id="project-techfest">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-badge">Web Dev</div>
+                                <div class="project-img" style="background-image: url('assets/techfest_website_mockup.png');"></div>
+                                <h3 class="card-title">Techfest IIT Bombay</h3>
+                            </div>
+                            <div class="card-back glass-card">
+                                <div class="project-info">
+                                    <h3>Techfest IIT Bombay</h3>
+                                    <p>Responsive website for Techfest IIT Bombay. Interactive, mobile-ready, and high-performance.</p>
+                                    <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JS</span></div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/SUMAN1040/techfest-website.git" class="btn-sm glass-btn"><i class="fab fa-github"></i> Code</a>
+                                        <a href="https://suman1040.github.io/techfest-website/" target="_blank" class="btn-sm"><i class="fas fa-external-link-alt"></i> Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control next" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="observe-section">
+            <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+                        <div class="book-container" id="experience-container">
+                    <!-- Mobile Cover (Visible only on < 993px) -->
+                    <div class="journey-mobile-cover glass-card">
+                        <div class="page-content" style="text-align: center;">
+                            <h3 class="gradient-text">My Professional Journey</h3>
+                            <p>Explore the milestones, education, and experiences that shaped my career.</p>
+                            <button class="btn btn-primary" onclick="toggleMobileJourney(true)" style="margin-top: 2rem;">Open Journey <i class="fas fa-book-open"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="book" id="experience-book">
+                        <!-- Navigation for Mobile Journey (Close Button) -->
+                        <div class="mobile-journey-header glass-card">
+                            <button class="btn-sm" onclick="toggleMobileJourney(false)"><i class="fas fa-times"></i> Close Journey</button>
+                        </div>
+                    
+                    <!-- Page 1 -->
+                    <div class="book-page" id="page1" style="z-index: 7;">
+                        <div class="page-front glass-card">
+                            <div class="page-content" style="text-align: center; margin-top: 2rem;">
+                                <h3 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">My Journey</h3>
+                                <p style="font-size: 1.1rem; line-height: 1.8;">A timeline of my professional experience and academic trajectory, presented as a story of growth.</p>
+                            </div>
+                            <div class="page-footer" style="justify-content: flex-end;">
+                                <button class="turn-btn next-btn" onclick="turnPage(1, true)">Open Journey &nbsp;<i class="fas fa-book-open"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content">
+                                <h3>High School</h3>
+                                <h4>Bankura Kenduadihi Boys High School</h4>
+                                <span class="date">Jan 2014 - May 2022</span>
+                                <p><strong>Grade: A</strong></p>
+                                <p>Built a strong foundational knowledge in science and mathematics, graduating with excellent marks.</p>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(1, false)"><i class="fas fa-arrow-left"></i>&nbsp; Close</button>
+                                <span class="page-num">1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 2 -->
+                    <div class="book-page" id="page2" style="z-index: 6;">
+                        <div class="page-front glass-card">
+                            <div class="page-content">
+                                <h3>B.Tech, Computer Science</h3>
+                                <h4>University of Engineering & Management</h4>
+                                <span class="date">Jul 2023 - Jul 2027</span>
+                                <p><strong>Skills:</strong> Python, Java, C, Web Development, DSA, Firebase, MATLAB & more.</p>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">2</span>
+                                <button class="turn-btn next-btn" onclick="turnPage(2, true)">Next &nbsp;<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content">
+                                <h3>B.Tech-Minor, AI & ML</h3>
+                                <h4>University of Engineering & Management</h4>
+                                <span class="date">Jul 2024 - Dec 2026</span>
+                                <p>Specialized minor degree focusing on Artificial Intelligence, Machine Learning algorithms, and data modeling.</p>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(2, false)"><i class="fas fa-arrow-left"></i>&nbsp; Prev</button>
+                                <span class="page-num">3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 3 -->
+                    <div class="book-page" id="page3" style="z-index: 5;">
+                        <div class="page-front glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">2023 - Early 2024</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Member <br><span class="company">GDSC UEM Jaipur</span></h4>
+                                    <span class="date">Sep 2023 - Aug 2025</span>
+                                    <p>Organized workshops and contributed to campus developer communities.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Solution Challenge <br><span class="company">Google</span></h4>
+                                    <span class="date">Jan 2024 - Feb 2024</span>
+                                    <p>Developed a waste management web platform to streamline recycling.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Active Member <br><span class="company">IEEE</span></h4>
+                                    <span class="date">Apr 2024 - Dec 2024</span>
+                                    <p>Participated in technical workshops, networking events, and tech projects.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">4</span>
+                                <button class="turn-btn next-btn" onclick="turnPage(3, true)">Next &nbsp;<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Mid 2024</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Data Analytics Intern <br><span class="company">Accenture</span></h4>
+                                    <span class="date">Jun 2024</span>
+                                    <p>Cleaned and modeled datasets to uncover insights for strategic clients.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Android Development <br><span class="company">Pregrad</span></h4>
+                                    <span class="date">Jun 2024 - Sep 2024</span>
+                                    <p>Project-based training covering Kotlin, Room, mapping, and APIs.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Android Developer Intern <br><span class="company">EduSkills</span></h4>
+                                    <span class="date">Jul 2024 - Sep 2024</span>
+                                    <p>Focused on core Android frameworks and Java architectures.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(3, false)"><i class="fas fa-arrow-left"></i>&nbsp; Prev</button>
+                                <span class="page-num">5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 4 -->
+                    <div class="book-page" id="page4" style="z-index: 4;">
+                        <div class="page-front glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Mid - Late 2024</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Operational Team Head <br><span class="company">PRADYOG</span></h4>
+                                    <span class="date">Jul 2024 - Dec 2024</span>
+                                    <p>Organized large-scale events and coordinated dynamic technical teams.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Founder <br><span class="company">InnoX</span></h4>
+                                    <span class="date">Jul 2024 - Present</span>
+                                    <p>E-commerce startup offering everyday essentials delivered locally.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Campus Ambassador <br><span class="company">Acmegrade</span></h4>
+                                    <span class="date">Aug 2024 - Jan 2025</span>
+                                    <p>Spearheaded advertising initiatives and student outreach on campus.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">6</span>
+                                <button class="turn-btn next-btn" onclick="turnPage(4, true)">Next &nbsp;<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Late 2024</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Mobile App Dev Intern <br><span class="company">Lending Buddha</span></h4>
+                                    <span class="date">Oct 2024 - Dec 2024</span>
+                                    <p>Developed mobile applications utilizing Android SDK, Kotlin, and Firebase.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Campus Ambassador <br><span class="company">Wayspire</span></h4>
+                                    <span class="date">Nov 2024 - May 2025</span>
+                                    <p>Spearheaded outreach and advertising to enhance platform presence.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Data Science Intern <br><span class="company">British Airways</span></h4>
+                                    <span class="date">Dec 2024 - Jan 2025</span>
+                                    <p>Analyzed customer review data and built predictive models.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(4, false)"><i class="fas fa-arrow-left"></i>&nbsp; Prev</button>
+                                <span class="page-num">7</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 5 -->
+                    <div class="book-page" id="page5" style="z-index: 3;">
+                        <div class="page-front glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Early - Mid 2025</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Nesternship India 2025 <br><span class="company">Nestlé</span></h4>
+                                    <span class="date">Mar 2025</span>
+                                    <p>Organized initiatives focused on sustainability and responsible growth strategies.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Talent Park 2025 <br><span class="company">Unstop</span></h4>
+                                    <span class="date">Mar 2025</span>
+                                    <p>Developed strategies to showcase skills and connect with top recruiters.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Android Development Intern <br><span class="company">SaiKet Systems</span></h4>
+                                    <span class="date">Jun 2025 - Aug 2025</span>
+                                    <p>Designed UIs using Kotlin/XML, Jetpack components, and MVVM.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">8</span>
+                                <button class="turn-btn next-btn" onclick="turnPage(5, true)">Next &nbsp;<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Mid 2025</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Founder & Lead Organizer <br><span class="company">Kotlin User Group Jaipur</span></h4>
+                                    <span class="date">Jun 2025 - Present</span>
+                                    <p>Officially recognized JetBrains community. Organized tech talks.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Contributor <br><span class="company">GirlScript Summer of Code</span></h4>
+                                    <span class="date">Jul 2025 - Oct 2025</span>
+                                    <p>Promoted OSS awareness and contributed to impactful public repositories.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">College Ambassador <br><span class="company">Techfest, IIT Bombay</span></h4>
+                                    <span class="date">Jul 2025 - Dec 2025</span>
+                                    <p>Promoted Asia’s Largest Science & Technology Festival on campus.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(5, false)"><i class="fas fa-arrow-left"></i>&nbsp; Prev</button>
+                                <span class="page-num">9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 6 -->
+                    <div class="book-page" id="page6" style="z-index: 2;">
+                        <div class="page-front glass-card">
+                            <div class="page-content compact">
+                                <h3 class="page-title">Late 2025 - 2026</h3>
+                                <div class="exp-item">
+                                    <h4 class="role">Open Source Contributor <br><span class="company">Open Source Connect</span></h4>
+                                    <span class="date">Jul 2025 - Present</span>
+                                    <p>Collaborated with global mentors and teams on real-world open-source projects.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Student Ambassador <br><span class="company">Google Gemini</span></h4>
+                                    <span class="date">Aug 2025 - Dec 2025</span>
+                                    <p>Organizing AI awareness sessions and promoting tool adoption among students.</p>
+                                </div>
+                                <div class="exp-item">
+                                    <h4 class="role">Campus Mantri <br><span class="company">GeeksforGeeks</span></h4>
+                                    <span class="date">Jan 2026 - Present</span>
+                                    <p>Representing the platform on campus through community engagement and peer mentorship.</p>
+                                </div>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">10</span>
+                                <button class="turn-btn next-btn" onclick="turnPage(6, true)">Next &nbsp;<i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card">
+                            <div class="page-content" style="text-align: center; margin-top: 3rem;">
+                                <h3 class="gradient-text" style="font-size: 2rem;">Thank you!</h3>
+                                <br>
+                                <p style="font-size: 1.2rem;">My journey continues to evolve...</p>
+                            </div>
+                            <div class="page-footer">
+                                <button class="turn-btn prev-btn" onclick="turnPage(6, false)"><i class="fas fa-arrow-left"></i>&nbsp; Prev</button>
+                                <span class="page-num">11</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 7 -->
+                    <div class="book-page" id="page7" style="z-index: 1;">
+                        <div class="page-front glass-card">
+                            <div class="page-content" style="text-align: center; margin-top: 2rem;">
+                                <h3 class="gradient-text" style="font-size: 2.5rem;">The End</h3>
+                                <br>
+                                <p style="font-size: 1.2rem;">Always learning, always growing.</p>
+                                <a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">Let's Talk</a>
+                            </div>
+                            <div class="page-footer">
+                                <span class="page-num">12</span>
+                            </div>
+                        </div>
+                        <div class="page-back glass-card"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements Section -->
+        <section id="certifications" class="observe-section">
+            <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+            <div class="certifications-scroll-container glass-card">
+                <div class="certifications-scroll-area">
+                    <div class="certifications-grid">
+                        <!-- Main Cert 1 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/java.jpg);"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">NPTEL</span>
+                                <h3>Programming In Java</h3>
+                                <p class="credential-id">ID: NPTEL25CS110S358603535</p>
+                                <span class="cert-date">Nov 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs110/Course/NPTEL25CS110S35860353510878607.pdf" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Cert 2 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/forage.jpg);"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Forage</span>
+                                <h3>Data Analytics and Visualization</h3>
+                                <p class="cert-skills">Skills: Analytical Skills</p>
+                                <p class="credential-id">ID: Tk3SncYPBwrJy3GWD</p>
+                                <span class="cert-date">Jun 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/186FIBNQz0JijB3HbilrkX2Se226ZqCzl/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Cert 3 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/C.jpg); filter: hue-rotate(45deg);"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">NPTEL</span>
+                                <h3>Introduction to Programming in C</h3>
+                                <p class="credential-id">ID: NPTEL25CS119S537401161</p>
+                                <span class="cert-date">Sep 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs119/Course/NPTEL25CS119S53740116109153812.pdf" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Participations -->
+                        <!-- Item 1 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/9to5quiz.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Quiz</span>
+                                <h3>9 TO 5 Quiz</h3>
+                                <span class="cert-date">30 Jan 2026</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1dUa65k0tTwzInzECPb4Zy44E9Xvx4BKw/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url('assets/adobe.png');"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Hackathon</span>
+                                <h3>Adobe India Hackathon</h3>
+                                <p>Round 1 - MCQ + Coding</p>
+                                <span class="cert-date">27 Aug 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1ApShocdJEuA13XVUfGZivJjrbpFBEcEb/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url('assets/Sustainium2025.png'); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Business Challenge</span>
+                                <h3>Sustainium 2025</h3>
+                                <p>Business Case Challenge</p>
+                                <span class="cert-date">14 Aug 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1hAkoAE5_4wl0F6uITUKpqTGf46csgFTT/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/unstop_playstrom.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Unstop</span>
+                                <h3>Unstop Playstorm</h3>
+                                <span class="cert-date">12 May 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1kf2tJTSEdrI3PNRGOKY7_oRM4KTmsVCN/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/hackToHill.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Hackathon</span>
+                                <h3>Hack the Hills Hackathon</h3>
+                                <p>E-Summit' 25 IIIT UNA</p>
+                                <span class="cert-date">25 Mar 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1AUgsV_4Y1x2HjEBTfdBW6YS9syvtju0F/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/asianPaints.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Asian Paints</span>
+                                <h3>Asian Paints INSPIRA</h3>
+                                <p>Round 1: Quiz</p>
+                                <span class="cert-date">16 Mar 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1fLaxsUOEg-CUqHiqZBN0bjJahHu50MMH/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 7 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/codeTitans.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Coding</span>
+                                <h3>Code Titans</h3>
+                                <p>Battle of Brilliance</p>
+                                <span class="cert-date">30 Jan 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1QlExKbVjsCZ_oGHNhWqlCitmHtm0LwK5/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 8 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/inQuiz.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Management</span>
+                                <h3>InQuizzitive</h3>
+                                <p>IIM Kozhikode</p>
+                                <span class="cert-date">30 Jan 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1lNd5m5L8mEcnKk-nMsK9ly38AMRZdq8q/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 9 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/techSav.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Tech</span>
+                                <h3>Tech Savishkaar 3.0</h3>
+                                <span class="cert-date">30 Jan 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1viju0His-sQ_jVmEy2vqj1NvPhhn0qQt/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 10 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/crypticHunt.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Hunt</span>
+                                <h3>Cryptic Hunt</h3>
+                                <p>Prometeo'25</p>
+                                <span class="cert-date">21 Jan 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1kcEjylGOicRD90Oivgg4m75HLPTQeq5r/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 11 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/pythonEss.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Python</span>
+                                <h3>Python Essentials</h3>
+                                <span class="cert-date">20 Jan 2025</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1jvF11FKjnOTR408Y9CA4HigdXiZAwdKH/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 12 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/pixel.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Design</span>
+                                <h3>Pixel Wizard</h3>
+                                <span class="cert-date">17 Dec 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1nJvkF1NjIqVW6bTT8SmhinDNG6ie09ZX/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 13 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/tataC.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Tata</span>
+                                <h3>TATA Crucible Quiz</h3>
+                                <span class="cert-date">18 Sep 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1AjI032J1yHdJ76xGeY3rWagemS_8Nw5C/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 14 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/aceCom.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Case Study</span>
+                                <h3>Ace Case Competitions</h3>
+                                <span class="cert-date">12 Aug 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1thOmnEEYKlIWiQRrgkE7taoh4ehZYYco/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 15 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/InnovationAndIns.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Innovation</span>
+                                <h3>Innovate and Inspire</h3>
+                                <span class="cert-date">19 Jul 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1h8fc5jF6YMliOMck7NF8c6xfD2WJn_j9/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 16 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/cricket.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Cricket</span>
+                                <h3>Cricket Quiz-A-Thon</h3>
+                                <span class="cert-date">08 Jul 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1zdypMh7F7-EGrT7FZWoA1SoYd9ADFPci/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 17 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/focusC.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Code</span>
+                                <h3>Focus On Code</h3>
+                                <span class="cert-date">20 Jun 2024</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/1MOo-hG9nr-dLzFnf-mUuzdT3X3zMLnir/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 18 -->
+                        <div class="cert-card tilt-element">
+                            <div class="cert-image" style="background-image: url(assets/tataBrand.png); opacity: 0.5;"></div>
+                            <div class="cert-content">
+                                <span class="issuer-badge">Tata</span>
+                                <h3>Tata Imagination Challenge</h3>
+                                <p>Tata Brand Assessment</p>
+                                <span class="cert-date">29 Nov 2023</span>
+                                <div class="cert-footer">
+                                    <a href="https://drive.google.com/file/d/14Dyhk_v9MkxShOzmiy3EY7D-EaDxpod6/view?usp=sharing" class="cert-link">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+->
+        <section id="contact" class="observe-section">
+            <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/skdeyofficial2003@gmail.com" method="POST" class="contact-form glass-card tilt-element" id="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" id="name" required placeholder=" " pattern="[A-Za-z\s]+" title="Please enter only letters and spaces.">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" id="message" required placeholder=" " rows="4"></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <div id="contact-status"></div>
+                </form>
+                <div class="social-links glass-card tilt-element">
+                    <h3>Find me online</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/suman1040" target="_blank" class="social-btn" aria-label="Github"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/suman1040/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/SumanDe14063037" target="_blank" class="social-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:skdeyofficial2003@gmail.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Designed & Built by Suman</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

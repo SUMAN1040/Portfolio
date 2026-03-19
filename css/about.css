@@ -1,0 +1,136 @@
+/* About Section */
+.about-grid {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.about-text {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+/* Bio Paragraphs */
+.bio-paragraphs {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.reveal-text {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.is-visible .reveal-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-text { transition-delay: 0.1s; }
+
+.highlight {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--gradient-1);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+/* Prospect Badge */
+.prospect-badge {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    margin: 2rem auto;
+    width: fit-content;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.prospect-badge:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 40px rgba(0, 240, 255, 0.15);
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    animation: float-badge 3s ease-in-out infinite;
+}
+
+.badge-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+@keyframes float-badge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .prospect-badge {
+        flex-direction: column;
+        border-radius: 20px;
+        text-align: center;
+        padding: 1.5rem;
+    }
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 480px) {
+    .stat h3 {
+        font-size: 1.8rem;
+    }
+    .about-stats {
+        gap: 1rem;
+    }
+}
+

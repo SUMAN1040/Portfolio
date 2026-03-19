@@ -1,0 +1,258 @@
+/* Globals & Variables */
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-darker: #050508;
+    --color-primary: #00f0ff;
+    --color-secondary: #7000ff;
+    --color-accent: #ff0055;
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(25, 25, 35, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    --gradient-1: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    --gradient-2: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    cursor: none; /* For custom cursor */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+.cursor-follower {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-secondary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.cursor.hovered {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid var(--color-accent);
+}
+.cursor-follower.hovered {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 85, 0.1);
+    border-color: transparent;
+}
+
+/* Utility Classes */
+.no-scroll {
+    overflow: hidden !important;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Typography & Utils */
+.gradient-text {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: var(--glass-shadow);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn-primary {
+    background: var(--gradient-1);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+    transform: translateY(-3px);
+}
+.btn-secondary {
+    color: var(--text-main);
+    border: 1px solid var(--color-primary);
+}
+.btn-secondary:hover {
+    background: rgba(0, 240, 255, 0.1);
+    transform: translateY(-3px);
+}
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+.btn-sm:hover {
+    background: var(--gradient-1);
+    color: var(--bg-dark);
+}
+
+/* Layout */
+.perspective-container {
+    perspective: 1000px; /* 3D perspective to parent container */
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Prevent local overflows */
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 100px 7%;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 80px 5%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+/* Scroll Reveal Animations */
+.observe-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.observe-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.scroll-top-btn:hover {
+    background: var(--gradient-1);
+    color: var(--bg-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.4);
+}
+
+/* Mobile cursor reset */
+@media (max-width: 768px) {
+    .cursor, .cursor-follower { display: none; } /* Disable custom cursor on mobile */
+    * { cursor: auto; }
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
