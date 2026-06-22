@@ -541,7 +541,6 @@ if (carousel && cards.length > 0) {
     });
 }
 
-
 // Contact Form Handler
 const contactForm = document.getElementById("contact-form");
 const contactStatus = document.getElementById("contact-status");
@@ -602,4 +601,3 @@ function showStatus(message, type) {
     }, 5000);
   }
 }
-
